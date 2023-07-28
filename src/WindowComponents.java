@@ -5,6 +5,8 @@ public class WindowComponents extends JFrame {
     private Font font, pointFont;
     private JLabel computerInfo, playerInfo, pointInfoComputer, pointInfoPlayer;
     private int point = 0;
+    private JButton rock, scissors, paper;
+    private ImageIcon imageRock, imagePaper, imageScissors;
     public WindowComponents(){
         super("tic-tac-toe");
         setLayout(null);
@@ -28,8 +30,24 @@ public class WindowComponents extends JFrame {
         pointInfoPlayer.setFont(pointFont);
         pointInfoPlayer.setBounds(180, 230 , 100, 100);
 
+
+        rock = new JButton();
+        rock.setBounds(270, 270, 50 ,50);
+
+        scissors = new JButton();
+        scissors.setBounds(330, 270, 50, 50);
+
+        paper = new JButton();
+        paper.setBounds(390, 270, 50,50);
+
+
+        add(paper);
+        add(scissors);
+        add(rock);
+
         add(pointInfoPlayer);
         add(pointInfoComputer);
+
         add(playerInfo);
         add(computerInfo);
     }
