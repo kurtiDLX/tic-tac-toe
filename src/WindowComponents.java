@@ -5,8 +5,8 @@ public class WindowComponents extends JFrame {
     private Font font, pointFont;
     private JLabel computerInfo, playerInfo, pointInfoComputer, pointInfoPlayer;
     private int point = 0;
-    private JButton rock, scissors, paper;
-    private ImageIcon imageRock, imagePaper, imageScissors;
+    private JButton rock, scissors, paper, questionMark,questionMarkComp;
+    private ImageIcon imageRock, imagePaper, imageScissors,gmStartImg;
     public WindowComponents(){
         super("tic-tac-toe");
         setLayout(null);
@@ -33,8 +33,17 @@ public class WindowComponents extends JFrame {
         imageScissors = new ImageIcon("src/scissors.jpg");
         imagePaper = new ImageIcon("src/paper.jpg");
         imageRock = new ImageIcon("src/rock.jpg");
+        gmStartImg = new ImageIcon("src/questionmark.jpg");
 
+        questionMark = new JButton();
+        questionMark.setIcon(gmStartImg);
+        questionMark.setBounds(180, 200, 65,65);
+        questionMark.setBorderPainted(false);
 
+        questionMarkComp = new JButton();
+        questionMarkComp.setIcon(gmStartImg);
+        questionMarkComp.setBounds(180, 85, 65,65);
+        questionMarkComp.setBorderPainted(false);
 
         rock = new JButton();
         rock.setIcon(imageRock);
@@ -49,6 +58,8 @@ public class WindowComponents extends JFrame {
         paper.setBounds(390, 270, 50,50);
 
 
+        add(questionMarkComp);
+        add(questionMark);
         add(paper);
         add(scissors);
         add(rock);
