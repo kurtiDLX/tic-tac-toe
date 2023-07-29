@@ -5,7 +5,7 @@ public class Main {
         WindowComponents window = new WindowComponents();
         window.setSize(500,400);
         window.setLocationRelativeTo(null);
-        window.setResizable(true);
+        window.setResizable(false);
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.setVisible(true);
     }

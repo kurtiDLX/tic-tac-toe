@@ -30,14 +30,22 @@ public class WindowComponents extends JFrame {
         pointInfoPlayer.setFont(pointFont);
         pointInfoPlayer.setBounds(180, 230 , 100, 100);
 
+        imageScissors = new ImageIcon("src/scissors.jpg");
+        imagePaper = new ImageIcon("src/paper.jpg");
+        imageRock = new ImageIcon("src/rock.jpg");
+
+
 
         rock = new JButton();
+        rock.setIcon(imageRock);
         rock.setBounds(270, 270, 50 ,50);
 
         scissors = new JButton();
+        scissors.setIcon(imageScissors);
         scissors.setBounds(330, 270, 50, 50);
 
         paper = new JButton();
+        paper.setIcon(imagePaper);
         paper.setBounds(390, 270, 50,50);
 
 
